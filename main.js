@@ -4,7 +4,9 @@ let containerMinato = document.getElementById('campoMinato');
 let myButton = document.getElementById('myButton');
 // console.log(myButton);
 
-
+//creiamo un array di 16 numeri random
+let bomb = arrayNum(1, 100);
+console.log(bomb);
 
 // //aggiungiamo evento al bottone
 myButton.addEventListener('click', function () {
@@ -28,25 +30,25 @@ myButton.addEventListener('click', function () {
         //appendiamo ogni campo singolo nel caontainerMinato.
         containerMinato.append(campoSingolo);
 
+
+
         //Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro
         campoSingolo.addEventListener('click', function () {
 
+            if (campoSingolo[i]  === bomb) {
 
-            //creiamo un array di 16 numeri random
+                campoSingolo.classList.add('squareClickBomb');
 
-
-            campoSingolo.classList.toggle('squareClick');
+            } else {
+                campoSingolo.classList.add('squareClick');
+            }
             //ed emetto un messaggio in console con il numero  della cella cliccata.
-            console.log('Cella clicata', this.innerHTML);
-
-
+            // console.log('Cella clicata', this.innerHTML);
 
         });
     }
 });
 
-let cane = arrayNum(1, 16);
-console.log(cane);
 
 //Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
 //Attenzione: nella stessa cella può essere posizionata al massimo una bomba, perciò nell’array delle bombe non potranno esserci due numeri uguali.
