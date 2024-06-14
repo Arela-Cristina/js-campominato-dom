@@ -6,27 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    
 </head>
 
 <body>
     <header>
         <h1>Campominato Game</h1>
     </header>
-    <!-- Bottoni Gioca -->
-    <div class="buttonBox">
-        <div>
-            <h2>Difficolta 1</h2>
-            <button id="myButton">Gioca♥</button>
-            <div>
-                <div id="points">0</div>
-                <div>Points</div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Container campo Minato -->
     <main>
         <section id="campoMinato">
+        </section>
+
+        <section>
+            <div id="levels">
+                <!-- Bottoni difficolta 1-->
+                <div class="buttonBox">
+                    <h2>Difficolta 1</h2>
+                    <button id="myButton">Gioca♥</button>
+                </div>
+                <!-- Bottoni difficolta 2-->
+                <div class="buttonBox">
+                    <h2>Difficolta 2</h2>
+                    <button id="myButton1">Gioca♥</button>
+                </div>
+                <!-- Bottoni difficolta 3-->
+                <div class="buttonBox">
+                    <h2>Difficolta 3</h2>
+                    <button id="myButton2">Gioca♥</button>
+                </div>
+            </div>
+
+            <div class="box-points">
+                <div id="points">0</div>
+                <div>Points</div>
+            </div>
         </section>
     </main>
     <script src="funzioni.js"></script>
