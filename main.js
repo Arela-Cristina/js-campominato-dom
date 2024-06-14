@@ -57,12 +57,8 @@ myButton.addEventListener('click', function () {
     }
     //Quando re inizio il gioco, il punteggio diventa 0
     punteggio.innerHTML = parseInt(0);
-    
+
 });
 
 
 
-
-
-//La partita termina quando il giocatore clicca su una bomba o quando raggiunge il numero massimo possibile di numeri consentiti (ovvero quando ha rivelato tutte le celle che non sono bombe).
-//Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha cliccato su una cella che non era una bomba.
