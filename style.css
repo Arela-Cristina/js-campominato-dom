@@ -13,12 +13,13 @@ h1 {
 main {
     display: flex;
     justify-content: center;
+    gap: 80px;
 }
 
 .buttonBox {
     display: flex;
     justify-content: center;
-    gap: 90px;
+    flex-direction: column;
 }
 
 button {
@@ -36,7 +37,20 @@ button {
     border: solid 8px #673AB7;
     padding: 20px 3px;
     height: 520px;
+}
 
+#levels {
+    display: flex;
+    gap: 50px;
+}
+
+.box-points {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #f30053;
 }
 
 /* SQUARE 100 X100 */
@@ -52,6 +66,9 @@ button {
 
 .squareClickBomb {
     background-color: red;
+    background-image: url(bomb.gif);
+    background-size: contain;
+
 }
 
 .squareClick {
