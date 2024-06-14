@@ -21,9 +21,21 @@ function arrayNum(min, max) {
         let arrayRandomNum = randomNumGenerator(min, max);
         if (!arrayNum.includes(arrayRandomNum)) {
             arrayNum.push(arrayRandomNum);
-
         }
     }
     return arrayNum
 }
 
+//funzione per stoppare il gioco
+function endGame() {
+    let squares = document.querySelectorAll('.square');
+    for (let i = 0; i < squares.length; i++) {
+        let square = squares[i];
+        if (!square.classList.contains('squareClick') && !square.classList.contains('squareClickBomb')) {
+            square.classList.add('disabled');
+        } else if (square.classList.contains('squareClick')) {
+            square.classList.add('disableClick');
+            square.classList.add('disabled');
+        }
+    }
+}
