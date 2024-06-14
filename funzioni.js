@@ -16,12 +16,15 @@ function randomNumGenerator(numMin, numMax) {
 
 // funzione per creare un array con  numeri random da x fino a y
 function arrayNum(min, max) {
-
+    console.log('16 numeri random', arrayNum);
     const arrayNum = [];
     while (arrayNum.length < max) {
         let arrayRandomNum = randomNumGenerator(min, max);
         if (!arrayNum.includes(arrayRandomNum)) {
             arrayNum.push(arrayRandomNum);
+
         }
     }
+    return arrayNum
 }
+
