@@ -51,9 +51,20 @@ button {
 }
 
 .squareClickBomb {
-    background-color: yellow;
+    background-color: red;
 }
 
 .squareClick {
+    background-color: rgb(74, 241, 8);
+}
+
+/* disable */
+
+.disabled {
+    background-color: rgb(136, 124, 124);
+    pointer-events: none;
+}
+
+.disableClick {
     background-color: rgb(74, 241, 8);
 }
