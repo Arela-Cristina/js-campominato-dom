@@ -8,15 +8,20 @@ function gameStructure(tag, classToAdd) {
 }
 
 // funzione per creare un numero random
-function randomNumGenerator(numMin, numMax){
-    let numGen = Math.floor((Math.random() * (numMax - numMin +1)) + numMin);
+function randomNumGenerator(numMin, numMax) {
+    let numGen = Math.floor((Math.random() * (numMax - numMin + 1)) + numMin);
     return numGen
 }
 
 
 // funzione per creare un array con  numeri random da x fino a y
-function arrayRandomNum(min, max){
+function arrayNum(min, max) {
 
     const arrayNum = [];
-    while(arrayNum.length <= max)
+    while (arrayNum.length < max) {
+        let arrayRandomNum = randomNumGenerator(min, max);
+        if (!arrayNum.includes(arrayRandomNum)) {
+            arrayNum.push(arrayRandomNum);
+        }
+    }
 }
